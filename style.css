@@ -1,0 +1,36 @@
+html,body{
+  color: rgba(53, 48, 48, 0.65);
+  font-weight:  500;
+}
+#heading_conatiner{
+  text-align: center;
+  color: black;
+  
+}
+
+.calculateBtn{
+width: 100%;
+background-color: rgb(58, 17, 145);
+}
+.error-icon {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .container{
+
+    border: 2px solid rgba(0, 0, 0, 0.63);
+    height: 440px;
+    width: 500px;
+  }
+  .exclamation_mark{
+    display:none;
+    transform: translateX(440px) translateY(38px);
+ 
+
+   
+  }
+  

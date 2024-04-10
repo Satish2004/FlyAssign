@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css" class="css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+
+<div id="heading_conatiner">
+
+    <h2 class="heading">Tax calculator</h2>
+</div>
+<div class="container mt-5">
+    <form id="taxForm">
+        <!--gross annual income-->
+      <div class="form-group  ">
+        <label  for="income"  ><i class="fa-solid fa-circle-exclamation exclamation_mark" ></i>Enter gross Annual Income
+          <i class="fa-regular fa-circle-question"></i> 
+        </label>
+  <!--error detection start-->
+        <input type="number" class="form-control" id="income"  required>
+        <div class="error-icon" id="incomeError" title="Income is required">*</div>
+      </div>
+
+
+                                <!--extra income-->
+      <div class="form-group">
+        <label for="extraIncome">Enter extra income
+          <i class="fa-regular fa-circle-question"></i>
+        </label>
+        <input type="number" class="form-control" id="extraIncome">
+      </div>
+
+
+                            <!--age section-->
+      <div class="form-group">
+        <label for="age">Enter age group 
+          <i class="fa-regular fa-circle-question"></i>
+        </label>
+        <select class="form-control" id="age" required>
+          <option value="" disabled selected></option>
+          <option value="lt40">&lt;40</option>
+          <option value="gte40lt60">≥ 40 &lt; 60</option>
+          <option value="gte60">≥ 60</option>
+        </select>
+        <div class="error-icon" id="ageError" title="Age is required">*</div>
+      </div>
+                        <!--deducations-->
+
+      <div class="form-group">
+        <label for="deductions" >Enter total applicable deducations
+          <i class="fa-regular fa-circle-question"></i>
+        </label>
+        <input type="number" class="form-control" id="deductions">
+      </div>
+        <button type="submit" class="btn btn-primary calculateBtn">Submit</button>
+   
+    </form>
+  </div>
+  
+  <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tax Calculation Result</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="resultText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
